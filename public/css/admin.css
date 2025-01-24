@@ -1,0 +1,78 @@
+.admin{
+    font-size:15px;
+}
+.adminbtn{
+    border: 1px solid rgb(112, 0, 0) !important;
+    display: block;
+    color: #ffffff !important;
+    position: relative;
+    transition: all .35s;
+  }
+
+  .adminbtn span{
+    position: relative;
+    z-index: 2;
+  }
+
+  .adminbtn:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(112, 0, 0);
+    transition: all .35s;
+  }
+  .adminbtn:hover{
+    color: #ffffff !important;
+  }
+  .adminbtn:hover:after{
+    width: 100%;
+  }
+
+
+
+  .adminaccept{
+    border: 1px solid rgb(28, 138, 0) !important;
+    display: block;
+    color: #ffffff !important;
+    position: relative;
+    transition: all .35s;
+  }
+
+  .adminaccept span{
+    position: relative;
+    z-index: 2;
+  }
+
+  .adminaccept:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(28, 138, 0);
+    transition: all .35s;
+  }
+  .adminaccept:hover{
+    color: #ffffff !important;
+  }
+  .adminaccept:hover:after{
+    width: 100%;
+  }
+  @media screen and (max-width:990px) {
+    .break{
+      display:block;
+      width:65px;
+
+      word-wrap:break-word;
+    }
+    @media screen and (max-width:576px) {
+      .break{
+        display:inline;
+        word-wrap:normal;
+      }
+    }
+}

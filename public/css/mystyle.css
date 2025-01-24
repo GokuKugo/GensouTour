@@ -1,0 +1,450 @@
+/* <=========GLOBAL=========> */
+
+@font-face {
+    font-family: CustomFont;
+    src: url(HighTowerText.woff);
+}
+
+.body {
+    font-family: CustomFont;
+    background-color: #111111 !important;
+    position: relative;
+
+}
+
+.btn {
+    border-radius: 0px !important;
+}
+
+.postbox {
+    width: 400px;
+}
+
+/* <=========HEADER=========> */
+.slider .slick-dots {
+    position: absolute;
+    bottom: 1vw !important;
+    display: block;
+    width: 100%;
+    padding: 10;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+}
+
+.slider {
+    margin: auto;
+    margin: 0px 30px;
+    position: relative;
+
+}
+
+
+.slider-for {
+    text-align: center;
+    margin: 0px 50px;
+
+}
+
+
+.slider-for-shop {
+    margin: 0px 10px !important;
+}
+.slider-for-photos{
+    margin: 0px 0px !important;
+    img{
+        height: 200px;
+    }
+
+}
+
+.sliderimg {
+    width: 68.75vw;
+    height: 28.64vw;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 8;
+    border-radius: 5px;
+}
+
+header,
+.singerimg {
+    position: relative;
+    cursor: grab;
+}
+
+header:active,
+.singerimg {
+    cursor: grabbing;
+
+}
+.clippath{
+    position:relative;
+    clip-path: polygon(80% 100%, 100% 80%, 100% 20%, 80% 0, 20% 0, 0 20%, 0 80%, 20% 100%);
+}
+header h1,
+header h3 {
+    z-index: 10;
+    opacity: 0;
+    width: 68.75vw;
+    position: absolute;
+    bottom: 47%;
+    background-color: rgb(0, 0, 0, 0.6);
+    text-shadow: black 1px 1px;
+    font-weight: bold;
+    color: #111111;
+    font-size: 4vw;
+    -webkit-text-stroke: 1px white;
+    user-select: none;
+    word-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+header h3 {
+    bottom: 38%;
+    font-size: 2vw;
+    position: sticky;
+}
+
+@media screen and (max-width:768px) {
+
+    header h1{
+        font-size: 27px;
+    }
+    header h3{
+        font-size:15px;
+    }
+}
+
+.slider :not(.slick-active) {
+    .sliderimg,h3,h1{
+        filter: blur(3px);
+    }
+    h1,
+    h3 {
+
+        animation: fadeout 1.5s !important;
+    }
+}
+
+.slider .slick-active {
+    animation: pointer 1.5s;
+    /* deactivate blur on the first slide */
+    .sliderimg,h3,h1{
+        filter: blur(0px);
+    }
+    h1,
+    h3 {
+        animation: fadein 1.5s !important;
+    }
+    &:hover {
+        h1,
+        h3 {
+            opacity: 0;
+            width: 0%;
+            transition: all 1.5s;
+        }
+    }
+    &:not(:hover) {
+        h1,
+        h3 {
+            max-width: 100%;
+            opacity: 1;
+            transition: all 1.5s;
+        }
+    }
+}
+
+
+
+@keyframes pointer {
+    0% {
+        pointer-events: none;
+    }
+
+    100% {
+        pointer-events: none;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    100% {
+        max-width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+        max-width: 100%;
+    }
+
+    100% {
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+
+/* <=========NAV=========> */
+.hover figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hover figure:hover img {
+    opacity: .5;
+}
+
+nav li a span,
+.footertext {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: white;
+    word-wrap: inherit;
+}
+
+nav li a span::after,
+.footertext::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    background-color: white;
+    transition: transform 0.25s ease-in-out;
+}
+
+nav li a span:hover::after,
+.footertext:hover::after {
+    transform: scaleX(1);
+}
+.navpd{
+    padding-left: 1.1rem !important;
+}
+@media screen and (max-width:768px) {
+
+    .navpd{
+        padding-left:0px !important;
+    }
+
+}
+@media screen and (max-width:1400px) {
+    .profilepic{
+        display: inherit;
+    }
+    .profilename{
+        display:none;
+    }
+}
+@media screen and (min-width:1401px) {
+    .profilepic{
+        display: none !important;
+    }
+    .profilename{
+        display:inherit !important;
+    }
+}
+
+
+
+/* <=========PARAGRAPH=========> */
+.paragraph {
+    background-color: #161616 !important;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+/* <=========SINGERS=========> */
+
+.singerimg {
+    width: 300px !important;
+    box-shadow: 0px 0px 10px 3px rgb(65, 64, 64);
+}
+
+.artistslider {
+    margin: auto;
+    position: relative;
+    width: 400px !important;
+    max-width: 100%;
+    padding: 0 !important;
+}
+
+ul .slick-dots {
+    padding: 0 !important;
+}
+
+/* <=========TICKETS, LOCATION=========> */
+.ticket {
+    border-top: 1px solid #2C2C2C;
+    padding: 10px;
+}
+
+.tickettwo {
+    border-top: 1px solid #2C2C2C;
+    border-bottom: 1px solid #2C2C2C !important;
+    padding: 10px;
+}
+.ticketimg{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+
+.custombtn {
+    border: 1px solid #2C2C2C !important;
+    display: block;
+    color: #ffffff !important;
+    position: relative;
+    transition: all .35s;
+}
+
+.custombtn span {
+    position: relative;
+    z-index: 2;
+}
+
+.custombtn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(44, 44, 44);
+    transition: all .35s;
+}
+
+.custombtn:hover {
+    color: #ffffff !important;
+}
+
+.custombtn:hover:after {
+    width: 100%;
+}
+
+/* <=========SHOP=========> */
+
+.shopimg {
+    width: 300px !important;
+}
+
+.shoprow {
+    font-size: 17px;
+}
+
+/* <=========FOOTER=========> */
+
+.newsletter {
+    width: 250px;
+    align-self: center;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+}
+
+@media screen and (max-width:768px) {
+
+    nav li,
+    .admintlabel {
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:769px) {
+    .login {
+        position: absolute !important;
+        padding-right: 40px;
+    }
+    .profilebox{
+        width: 650px !important;
+    }
+}
+
+.profilebox{
+    width:600px;
+}
+
+@media screen and (max-width:576px) {
+    nav ul img {
+        visibility: hidden;
+    }
+
+    nav li a {
+        text-align: center;
+    }
+
+    nav button {
+        width: 100%;
+    }
+
+    .login {
+        position: relative !important;
+    }
+
+    .shoprow {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer {
+    background-color: #000000;
+}
+
+/* <=========ARTISTS.PHP=========> */
+
+.singerstable tr td {
+    border: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.singerstable td {
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.outoftbl {
+    background-color: transparent !important;
+    border: none !important;
+    margin-inline: 20px;
+    padding-inline: 50px;
+}
+
+.thsing {
+    white-space: nowrap;
+}
+
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* <=========CONTACT.PHP=========> */
+.contactcss {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
